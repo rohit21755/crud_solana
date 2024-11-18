@@ -4,12 +4,12 @@ import { useWallet } from '@solana/wallet-adapter-react'
 import { WalletButton } from '../solana/solana-provider'
 import { AppHero, ellipsify } from '../ui/ui-layout'
 import { ExplorerLink } from '../cluster/cluster-ui'
-import { useCrudProgram } from './crud-data-access'
+import { useJournalProgram } from './crud-data-access'
 import { CrudCreate, CrudList } from './crud-ui'
 
 export default function CrudFeature() {
   const { publicKey } = useWallet()
-  const { programId } = useCrudProgram()
+  const { programId } = useJournalProgram()
 
   return publicKey ? (
     <div>
